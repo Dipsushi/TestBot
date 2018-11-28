@@ -21,7 +21,6 @@ bot.on("message", async message => {
 
 if(cmd === `${prefix}testing`) {
  return message.channel.send(`Success!`);
-}
    
 });
 
