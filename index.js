@@ -23,6 +23,4 @@ if(cmd === `${prefix}testing`) {
  return message.channel.send(`Success!`);
 }
    
-});
-
 bot.login(botconfig.token);
