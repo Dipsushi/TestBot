@@ -20,6 +20,8 @@ bot.on("message", async message => {
 
 if(bot.channels.find("name", "hehe") && message.content === `${prefix}testing`) {
  return bot.channels.find("name","hehe").send("Success!");
+} else {
+  return message.channel.send("Wrong Channel!");
 }
 
 });   
