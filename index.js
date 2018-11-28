@@ -21,5 +21,6 @@ bot.on("message", async message => {
 if(message.content === `${prefix}testing`) {
  return message.channel.send(`Success!`);
 }
-   
+
+});   
 bot.login(botconfig.token);
