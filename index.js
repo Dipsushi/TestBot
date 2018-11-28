@@ -17,7 +17,6 @@ bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
-});
 
 if(message.content === `${prefix}testing`) {
  return message.channel.send(`Success!`);
