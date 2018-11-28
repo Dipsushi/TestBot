@@ -18,12 +18,6 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
 
-  int i = 0;
- if(message.content === `${prefix}add`) {
-   i + 1; 
-   return message.channel.send(i);
- }
-
 if(message.content === `${prefix}testing`) {
  return bot.channels.find("name","hehe").send("Success!");
 }
