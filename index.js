@@ -18,7 +18,7 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
 
-if(bot.channels.get("name", "hehe") && message.content === `${prefix}testing`) {
+if(bot.channels.get("name","hehe") === "hehe" && message.content === `${prefix}testing`) {
  return bot.channels.find("name","hehe").send("Success!");
 } else {
   return message.channel.send("Wrong Channel!");
