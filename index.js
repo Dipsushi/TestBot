@@ -31,6 +31,21 @@ bot.on("message", async message => {
      return message.channel.send("You are trash");
    }
  }
+ 
+  function StartMoney(x) {
+   x = Math.start(x);
+  }
+  if(messag.content === `${prefix}givememoney`) {
+    var y = StartMoney(200);
+    return message.channel.send(x + " is transferred to you account".);
+  }
+}
+  
+  
+ 
+  
+ /**
+ */
   
 if(message.content === `${prefix}testing2` && message.channel.name === "hehe") {
  return bot.channels.find("name","hehe").send("It's working!");
