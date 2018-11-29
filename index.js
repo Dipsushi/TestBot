@@ -37,7 +37,7 @@ bot.on("message", async message => {
   }
   if(messag.content === `${prefix}givememoney`) {
     var y = StartMoney(200);
-    return message.channel.send(x + " is transferred to you account".);
+    return message.channel.send(StartMoney(x) + " is transferred to you account".);
   }
 }
   
