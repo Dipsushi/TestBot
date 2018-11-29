@@ -40,7 +40,6 @@ bot.on("message", async message => {
     var y = StartMoney(200);
     return message.channel.send(StartMoney(x) + "Money Transferred.");
   }
-}
   
   
  
