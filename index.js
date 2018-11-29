@@ -34,11 +34,11 @@ bot.on("message", async message => {
  
   function StartMoney(x) {
    x = Math.start(x);
-   return Math.floor(StartMoney(x));
+   return Math.floor(Math.floor(StartMoney(x)));
   }
   if(messag.content === `${prefix}givememoney`) {
     var y = StartMoney(200);
-    return message.channel.send(StartMoney(x) + "Money Transferred.");
+    return message.channel.send("Money Transferred.");
   }
   
   
