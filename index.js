@@ -18,14 +18,18 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
   
- var x = 5.5;  
-if(message.content === `${prefix}testing2` && message.channel.name === "hehe") {
- return bot.channels.find("name","hehe").send("It's working!");
-} else if(message.content === `${prefix}testing` && message.channel.name === "hehe") {
- return bot.channels.find("name","hehe").send(Math.round(x));
-} else {
-  return message.channel.send("Wrong Channel!");
-}
+ var players = [];
+ var bank = [];
+ var a = 0;
+ var b = 0; 
+  
+ if(cmd === `${prefix}register`) { 
+   players[a] = `${user}`;
+   bank[b] = Math.round(200);
+   return message.channel.send(players[a] + " have successfully registered! You have $" + bank[b] + "in your bank account!"); 
+   a++;
+   b++;
+ }
 
 });   
 bot.login(botconfig.token);
