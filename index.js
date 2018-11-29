@@ -20,9 +20,9 @@ bot.on("message", async message => {
 
  if(message.content === "+testing" && message.channel.name === "hehe" || "+testing2" && message.channel.name === "hehe") {
     
-if(message.content === `${prefix}testing2`) {
+if(message.content === `${prefix}testing2` && message.channel.name === "hehe") {
  return bot.channels.find("name","hehe").send("It's working!");
-} else if(message.content === `${prefix}testing`) {
+} else if(message.content === `${prefix}testing` && message.channel.name === "hehe") {
  return bot.channels.find("name","hehe").send("Success!");
 } else {
   return message.channel.send("Wrong Channel!");
