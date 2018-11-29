@@ -24,7 +24,7 @@ bot.on("message", async message => {
  var b = 0; 
   
  if(cmd === `${prefix}register`) { 
-   players[a] = `${user}`;
+   players[a] = message.member;
    bank[b] = Math.round(200);
    return message.channel.send(players[a] + " have successfully registered! You have $" + bank[b] + "in your bank account!"); 
    a++;
