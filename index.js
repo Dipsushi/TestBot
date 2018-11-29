@@ -17,35 +17,6 @@ bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
-
- function getRandomInt(min, max) {
- min = Math.ceil(min);
- max = Math.floor(max);
- return Math.floor(Math.random() * (max - min)) + min;
- }
- if(message.content === `${prefix}random`) {
-   var x = getRandomInt(0 , 20);
-   if(x < 10) {
-     return message.channel.send("Meh");
-   } else {
-     return message.channel.send("Meh");
-   }
- }
- 
-  function StartMoney(x) {
-   x = Math.start(x);
-   return Math.floor(Math.floor(StartMoney(x)));
-  }
-  if(messag.content === `${prefix}givememoney`) {
-    var y = StartMoney(200);
-    return message.channel.send("Money Transferred.");
-  }
-  
-  
- 
-  
- /**
- */
   
 if(message.content === `${prefix}testing2` && message.channel.name === "hehe") {
  return bot.channels.find("name","hehe").send("It's working!");
