@@ -28,6 +28,6 @@ if(message.content === `${prefix}testing`) {
 } else {
   return message.channel.send("Wrong Channel!");
 }
-
+}
 });   
 bot.login(botconfig.token);
