@@ -40,11 +40,11 @@ bot.on("message", async message => {
  }
  if(message.content === `${prefix}random`) {
    var x = getRandomInt(0 , 10);
-   if(x =< 5) {
+   if(x <= 5) {
      newA = A - lose; 
      A = newA; 
      return message.channel.send("You lost $50. Your new balance is now $ " + A + ".");
-   } else if(x > 5 && x =< 10){
+   } else if(x > 5 && x <= 10){
      return message.channel.send("You are trash");
    } 
  }
