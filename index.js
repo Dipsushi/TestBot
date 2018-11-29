@@ -24,6 +24,7 @@ if(message.content === `${prefix}testing2`) {
  return bot.channels.find("name","hehe").send("It's working!");
 } else {
   return message.channel.send("Wrong Channel!");
+}
 if(message.content === `${prefix}testing`) {
  return bot.channels.find("name","hehe").send("Success!");
 } else {
