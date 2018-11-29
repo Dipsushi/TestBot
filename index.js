@@ -22,6 +22,9 @@ bot.on("message", async message => {
  var bank = [];
  var a = 0;
  var b = 0; 
+ var A = bank[players.indexOf(message.member)];
+ var lose = 50;
+ var newA = 0;
   
  if(cmd === `${prefix}register`) { 
    players[a] = message.member;
@@ -38,8 +41,8 @@ bot.on("message", async message => {
  if(message.content === `${prefix}random`) {
    var x = getRandomInt(0 , 10);
    if(x =< 5) {
-     var A = bank[players.indexOf(message.member)] - 50;
-     bank[players.indexOf(message.member)] = A; 
+     newA = A - lose; 
+     A = newA; 
      return message.channel.send("You lost $50. Your new balance is now $ " + A + ".");
    } else if(x > 5 && x =< 10){
      return message.channel.send("You are trash");
