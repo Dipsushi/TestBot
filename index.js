@@ -18,10 +18,11 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
   
+ var x = 5.5;  
 if(message.content === `${prefix}testing2` && message.channel.name === "hehe") {
  return bot.channels.find("name","hehe").send("It's working!");
 } else if(message.content === `${prefix}testing` && message.channel.name === "hehe") {
- return bot.channels.find("name","hehe").send(Math.round(3.5));
+ return bot.channels.find("name","hehe").send(Math.round(x));
 } else {
   return message.channel.send("Wrong Channel!");
 }
