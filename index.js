@@ -34,7 +34,7 @@ bot.on("message", async message => {
  
   function StartMoney(x) {
    x = Math.start(x);
-   return StartMoney(x);
+   return Math.floor(StartMoney(x));
   }
   if(messag.content === `${prefix}givememoney`) {
     var y = StartMoney(200);
