@@ -30,6 +30,7 @@ bot.on("message", async message => {
    } else {
      return message.channel.send("You are trash");
    }
+ }
   
 if(message.content === `${prefix}testing2` && message.channel.name === "hehe") {
  return bot.channels.find("name","hehe").send("It's working!");
