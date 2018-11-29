@@ -18,6 +18,11 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
 
+ if(message.content === "+testing" || "+testing2" && message.channel.name === "hehe") {
+    
+if(message.content === `${prefix}testing2` && message.channel.name === "hehe") {
+ return bot.channels.find("name","hehe").send("It's working!");
+} 
 if(message.content === `${prefix}testing` && message.channel.name === "hehe") {
  return bot.channels.find("name","hehe").send("Success!");
 } else {
