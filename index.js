@@ -26,9 +26,9 @@ bot.on("message", async message => {
  if(message.content === `${prefix}random`) {
    var x = getRandomInt(0 , 20);
    if(x < 10) {
-     return message.channel.send(`getRandomInt(0, 20)`;
+     return message.channel.send("Meh");
    } else {
-     return message.channel.send(`getRandomInt(0, 20`);
+     return message.channel.send("Meh");
    }
  }
  
