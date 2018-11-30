@@ -23,7 +23,7 @@ bot.on("message", async message => {
  var a = 0;
  var b = 0;
  var value = 0;
- var value2 = 0;
+ var loss = 50;
  
  if(cmd === `${prefix}register`) {
    if(players.includes(message.member) == -1) {
@@ -42,12 +42,12 @@ bot.on("message", async message => {
  max = Math.floor(max);
  return Math.floor(Math.random() * (max - min)) + min;
  }
- if(message.content === `${prefix}money`) {
+  
+ if(cmd === `${prefix}money`) {
    var x = getRandomInt(0 , 10);
    if(x <= 5) {
-     value = bank[players.indexOf(message.member)];
-     value2 = value - 50; 
-     bank.splice(players.indexOf(message.member), 0, value2);
+     value = bank[players.indexOf(message.member)] - loss; 
+     bank.splice(players.indexOf(message.member), 0, value);
      return message.channel.send("You lost $50. Your new balance is now $ " + bank[players.indexOf(message.member)]  + ".");
    } else {
    return message.channel.send("Nope try again"); 
