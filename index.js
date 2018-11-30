@@ -48,7 +48,6 @@ bot.on("message", async message => {
      return message.channel.send("You are trash");
    } 
  }
-}
 
 });   
 bot.login(botconfig.token);
