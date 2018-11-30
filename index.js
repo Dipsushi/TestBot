@@ -41,7 +41,7 @@ bot.on("message", async message => {
    } else if(x <= 5) {
      newA = bank[players.indexOf(message.member)]; 
      newA = newA - loss; 
-     bank.splice(players.indexOf(message.member), 0, newA);
+     var newbalance = bank.splice(players.indexOf(message.member), 0, newA);
      c = players.indexOf(message.member);
      return message.channel.send(players[c] + bank[c]);
    } else if(x > 5){
