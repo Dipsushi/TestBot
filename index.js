@@ -52,6 +52,7 @@ bot.on("message", async message => {
      return message.channel.send("You lost $50. Your new balance is now $ " + bank[players.indexOf(message.member)]  + ".");
    } 
  }
+ }
 
 });   
 bot.login(botconfig.token);
