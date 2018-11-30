@@ -54,6 +54,7 @@ bot.on("message", async message => {
    return message.channel.send("Nope try again"); 
  }
  }
+ }
 
 });   
 bot.login(botconfig.token);
