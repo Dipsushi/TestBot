@@ -36,12 +36,10 @@ bot.on("message", async message => {
  } else {
    return message.channel.send("You are already registered!");
  }  
-
- return Math.floor(Math.random() * (max - min)) + min;
     
  if(message.content === `${prefix}random`) {
-   min = Math.ceil(min);
-   max = Math.floor(max);
+   var min = Math.ceil(min);
+   var max = Math.floor(max);
    var x = Math.floor(Math.random() * (max - min)) + min;
    if(x <= 5) {
      return message.channel.send(players[a] + bank[b]);
