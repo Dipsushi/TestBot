@@ -25,6 +25,7 @@ bot.on("message", async message => {
  var A = bank[players.indexOf(message.member)];
  var lose = 50;
  var newA = 0;
+ var newB = 0;
   
  if(cmd === `${prefix}register`) { 
    players[a] = message.member;
