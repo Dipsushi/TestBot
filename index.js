@@ -17,9 +17,7 @@ bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
-  
-function register() { 
-  
+    
  var players = [];
  var bank = [];
  var a = 0;
@@ -54,7 +52,7 @@ function getRandomInt(min, max) {
  }
  }
 }
-}
+
 
 });   
 bot.login(botconfig.token);
