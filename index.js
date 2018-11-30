@@ -42,14 +42,12 @@ function getRandomInt(min, max) {
  return Math.floor(Math.random() * (max - min)) + min;
  }
  if(message.content === `${prefix}random`) {
-   var x = getRandomInt(0 , 20);
-   if(x < 5) {
+   var x = getRandomInt(0 , 10);
+   if(x <= 5) {
      return message.channel.send(players[a] + bank[b]);
-   } else if(x > 5 && x < 10){
+   } else if(x > 5){
      return message.channel.send("You are trash");
-   } else {
-     return message.channel.send("You are golden trash");
- }
+   } 
  }
 }
 
