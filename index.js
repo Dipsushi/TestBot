@@ -21,18 +21,17 @@ bot.on("message", async message => {
  var players = [];
  var bank = [];
  var a = 0;
- var b = 0; 
- var newA = 0;
- var newB = 0;
- var index = players.indexOf(message.member);
-  
- if(cmd === `${prefix}register`) { 
-   players.splice(index, 0, message.member);
-   bank.splice(index, 0, 200);
-   return message.channel.send(players[a] + " have successfully registered! You have $" + bank[b] + " in your bank account!"); 
+ var b = 0;
+ 
+ 
+ if(cmd === `${prefix}register`) {
+   players.splice(a, 0, message.member);
+   bank.splice(b, 0, 200);
+   return message.channel.send(bank[a]);
    a++;
    b++;
  }
+  
  function getRandomInt(min, max) {
  min = Math.ceil(min);
  max = Math.floor(max);
@@ -41,12 +40,7 @@ bot.on("message", async message => {
  if(message.content === `${prefix}random`) {
    var x = getRandomInt(0 , 10);
    if(x <= 5) {
-   newA = bank[index];
-   newA = newA - 50; 
-   bank.splice(index, 1, newA);
-     return message.channel.send("You lost $50. Your new balance is now $ " + bank.pop(index) + ".");
-   } else if(x > 5 && x <= 10){
-     return message.channel.send("You are trash");
+     return message.channel.send("You lost $50. Your new balance is now $ " +  + ".");
    } 
  }
 
