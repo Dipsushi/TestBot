@@ -22,27 +22,28 @@ bot.on("message", async message => {
  var bank = [];
  var a = 0;
  var b = 0;
- var value = 0;
- var min = 0;
- var max = 10;
+ var c = 0;
+ var d = 0;
+ var newA = 0;
+ var loss = 50;
   
-  if(cmd === `${prefix}register`) {
-   if(players.includes(message.member) == -1) {
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+   if(cmd == `${prefix}start`) {
+   var x = getRandomInt(10);
+   if(players.includes(message.member) == -1){
    players.splice(a, 0, message.member);
    bank.splice(b, 0, 200);
-   return message.channel.send(players[a] + bank[b]);
+   return message.channel.send(players[a] + bank[b});
    a++;
    b++;
- } else {
-   return message.channel.send("You are already registered!");
- }  
-    
- if(message.content === `${prefix}random`) {
-  function getRandomInt() {
-    return Math.floor(Math.random() * Math.floor(10));
-  }
-   if(x <= 5) {
-     return message.channel.send(players[a] + bank[b]);
+   } else if(x <= 5) {
+     newA = bank[players.indexOf(message.member); 
+     newA = newA - loss; 
+     bank.splice(players.indexOf(message.member), 0, newA);
+     c = players.indexOf(message.member);
+     return message.channel.send(players[c] + bank[c]);
    } else if(x > 5){
      return message.channel.send("You are trash");
    } 
