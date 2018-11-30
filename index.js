@@ -22,7 +22,8 @@ bot.on("message", async message => {
  var bank = [];
  var a = 0;
  var b = 0;
- 
+ var value = 0;
+ var value2 = 0;
  
  if(cmd === `${prefix}register`) {
    if(players.includes(message.member) == -1) {
@@ -35,7 +36,8 @@ bot.on("message", async message => {
    return message.channel.send("You are already registered!");
  }
  }
-  
+ if(cmd === `${prefix}money`){
+   
  function getRandomInt(min, max) {
  min = Math.ceil(min);
  max = Math.floor(max);
@@ -44,7 +46,10 @@ bot.on("message", async message => {
  if(message.content === `${prefix}random`) {
    var x = getRandomInt(0 , 10);
    if(x <= 5) {
-     return message.channel.send("You lost $50. Your new balance is now $ " +  + ".");
+     value = bank[players.indexOf(message.member)];
+     value2 = value - 50; 
+     bank.splice(players.indexOf(message.member), 0, value2);
+     return message.channel.send("You lost $50. Your new balance is now $ " + bank[players.indexOf(message.member)]  + ".");
    } 
  }
 
