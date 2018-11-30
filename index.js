@@ -18,7 +18,12 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
 
-  getRandomInt();
+ var players = [];
+ var bank = [];
+ var a = 0;
+ var b = 0;
+ var value = 0;
+ var loss = 50;
   
  if(cmd === `${prefix}register`) {
    if(players.includes(message.member) == -1) {
@@ -30,26 +35,8 @@ bot.on("message", async message => {
  } else {
    return message.channel.send("You are already registered!");
  }
-   function getRandomInt(min, max) { 
-     
- var players = [];
- var bank = [];
- var a = 0;
- var b = 0;
- var value = 0;
- var loss = 50;
-     
- min = Math.ceil(min);
- max = Math.floor(max);
- return Math.floor(Math.random() * (max - min)) + min;
- } 
- if(message.content === `${prefix}money`) {
-   var x = getRandomInt(0 , 10);
-   if(x <= 5) {
-     return message.channel.send(players[a] + bank[b]);
-   } else {
-   return message.channel.send("Nope try again"); 
- }
+ if(cmd === `${prefix}meep`){
+   return message.channel.send(players[a] + bank[b]);
  }
  }
  
