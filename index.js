@@ -23,9 +23,13 @@ bot.on("message", async message => {
  var a = 0;
  var b = 0;
  var value = 0;
- 
   
- if(cmd === `${prefix}register`) {
+function getRandomInt(min, max) {
+ min = Math.ceil(min);
+ max = Math.floor(max);
+ return Math.floor(Math.random() * (max - min)) + min;
+ }
+  if(cmd === `${prefix}register`) {
    if(players.includes(message.member) == -1) {
    players.splice(a, 0, message.member);
    bank.splice(b, 0, 200);
@@ -34,13 +38,7 @@ bot.on("message", async message => {
    b++;
  } else {
    return message.channel.send("You are already registered!");
- }
-   
-function getRandomInt(min, max) {
- min = Math.ceil(min);
- max = Math.floor(max);
- return Math.floor(Math.random() * (max - min)) + min;
- }
+ }  
  if(message.content === `${prefix}random`) {
    var x = getRandomInt(0 , 10);
    if(x <= 5) {
