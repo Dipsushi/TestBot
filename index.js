@@ -36,14 +36,13 @@ bot.on("message", async message => {
    return message.channel.send("You are already registered!");
  }
  }
- if(cmd === `${prefix}money`){
-   
+  
  function getRandomInt(min, max) {
  min = Math.ceil(min);
  max = Math.floor(max);
  return Math.floor(Math.random() * (max - min)) + min;
  }
- if(message.content === `${prefix}random`) {
+ if(message.content === `${prefix}money`) {
    var x = getRandomInt(0 , 10);
    if(x <= 5) {
      value = bank[players.indexOf(message.member)];
@@ -54,7 +53,7 @@ bot.on("message", async message => {
    return message.channel.send("Nope try again"); 
  }
  }
- }
+ 
 
 });   
 bot.login(botconfig.token);
