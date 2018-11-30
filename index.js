@@ -18,16 +18,14 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
   
-function getRandomInt(min, max) {
  var players = [];
  var bank = [];
  var a = 0;
  var b = 0;
- var value = 0; 
- min = Math.ceil(min);
- max = Math.floor(max);
- return Math.floor(Math.random() * (max - min)) + min;
- }
+ var value = 0;
+ var min = 0;
+ var max = 10;
+  
   if(cmd === `${prefix}register`) {
    if(players.includes(message.member) == -1) {
    players.splice(a, 0, message.member);
@@ -38,8 +36,13 @@ function getRandomInt(min, max) {
  } else {
    return message.channel.send("You are already registered!");
  }  
+
+ return Math.floor(Math.random() * (max - min)) + min;
+    
  if(message.content === `${prefix}random`) {
-   var x = getRandomInt(0 , 10);
+   min = Math.ceil(min);
+   max = Math.floor(max);
+   var x = Math.floor(Math.random() * (max - min)) + min;
    if(x <= 5) {
      return message.channel.send(players[a] + bank[b]);
    } else if(x > 5){
