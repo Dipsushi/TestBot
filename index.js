@@ -26,6 +26,7 @@ bot.on("message", async message => {
  var d = 0;
  var newA = 0;
  var loss = 50;
+ var e = 0;
   
   function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
