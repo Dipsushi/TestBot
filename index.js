@@ -17,11 +17,7 @@ bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
-  
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
-  }
-  
+    
  var players = [];
  var bank = [];
  var a = 0;
@@ -32,7 +28,7 @@ bot.on("message", async message => {
  var loss = 50; 
   
    if(cmd == `${prefix}start`) {
-   var x = getRandomInt(10);
+   var x = Math.floor(Math.random() * Math.floor(10));
    if(players.includes(message.member) == -1){
    players.splice(a, 0, message.member);
    bank.splice(b, 0, 200);
