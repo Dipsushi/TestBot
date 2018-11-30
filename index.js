@@ -31,7 +31,7 @@ bot.on("message", async message => {
   
    if(cmd === `${prefix}start`) {
   
-   if(players.includes(message.member) = -1){
+   if(d = 0){
    players.splice(a, 0, message.member);
    bank.splice(b, 0, 200);
    a++;
