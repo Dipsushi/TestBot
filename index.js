@@ -18,8 +18,8 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
  
-  var players[];
-  var bank[];
+  var players = new Array(5);
+  var bank = new Array(5); 
   var a = 0;
   var b = 0; 
   
