@@ -29,7 +29,7 @@ bot.on("message", async message => {
   if(cmd === `${prefix}start`) { 
       if(players.includes(message.member) = -1) {
         players.splice(a, 0, message.member); 
-        bank.splice(a, 0, message.member); 
+        bank.splice(a, 0, 200); 
         
         return message.channel.send(players[a-1] + " " + bank[a-1]); 
       } else {
