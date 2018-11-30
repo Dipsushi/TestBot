@@ -29,5 +29,13 @@ bot.on("message", async message => {
    
    return message.channel.send(players[a] + bank[a]);
  }
+ if(cmd === `${prefix}add`){
+   var index = players.indexOf(message.member);
+   var c = players[index] - 50;
+   bank.splice(index, 0, c); 
+   
+   return message.channel.send(bank[index]); 
+ }
+   
 });   
 bot.login(botconfig.token);
