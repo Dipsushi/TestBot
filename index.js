@@ -35,7 +35,7 @@ bot.on("message", async message => {
    if(players.includes(message.member) == -1){
    players.splice(a, 0, message.member);
    bank.splice(b, 0, 200);
-   return message.channel.send(players[a] + bank[b});
+   return message.channel.send(players[a] + bank[b]);
    a++;
    b++;
    } else if(x <= 5) {
