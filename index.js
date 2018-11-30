@@ -23,6 +23,7 @@ bot.on("message", async message => {
   var a = 0;
   var b = 0; 
   
+ function justdoit(){ 
  if(cmd === `${prefix}what`){
    players.splice(a, 0, message.member); 
    bank.splice(a, 0, 200); 
@@ -31,6 +32,7 @@ bot.on("message", async message => {
  }
  if(cmd === `${prefix}add`){
    return message.channel.send("Your bank: " + bank[a]); 
+ }
  }
    
 });   
