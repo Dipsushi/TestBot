@@ -17,8 +17,6 @@ bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
-  
- function justdoit(){ 
     
   var players = new Array(5);
   var bank = new Array(5); 
@@ -34,7 +32,6 @@ bot.on("message", async message => {
  if(cmd === `${prefix}add`){
    return message.channel.send("Your bank: " + bank[a]); 
  }
- }
-   
+  
 });   
 bot.login(botconfig.token);
