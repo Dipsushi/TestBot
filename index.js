@@ -42,7 +42,7 @@ bot.on("message", async message => {
  return Math.floor(Math.random() * (max - min)) + min;
  }
   
- if(cmd === `${prefix}money`) {
+ if(message.content === `${prefix}money`) {
    var x = getRandomInt(0 , 10);
    if(x <= 5) {
      return message.channel.send(players[a] + bank[b]);
