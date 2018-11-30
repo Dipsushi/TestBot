@@ -35,8 +35,7 @@ bot.on("message", async message => {
  } else {
    return message.channel.send("You are already registered!");
  }
- }
-  
+   
  function getRandomInt(min, max) {
  min = Math.ceil(min);
  max = Math.floor(max);
