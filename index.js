@@ -26,25 +26,23 @@ bot.on("message", async message => {
  var d = 0;
  var newA = 0;
  var loss = 50; 
+ var x = 0;
   
-   if(cmd == `${prefix}start`) {
-   var x = Math.floor(Math.random() * Math.floor(10));
-   if(players.includes(message.member) == -1){
+   if(cmd === `${prefix}start`) {
+  
+   if(players.includes(message.member) = -1){
    players.splice(a, 0, message.member);
    bank.splice(b, 0, 200);
-   return message.channel.send(players[a] + bank[b]);
    a++;
    b++;
-   } else if(x <= 5) {
-     newA = bank[players.indexOf(message.member)]; 
+   return message.channel.send(players[a-1] + bank[b-1]);
+ 
+   } else if(x = 0 ) {
+     newA = players.indexOf(message.member); 
      newA = newA - loss; 
      var newbalance = bank.splice(players.indexOf(message.member), 0, newA);
-     c = players.indexOf(message.member);
-     return message.channel.send(players[c] + bank[c]);
-   } else if(x > 5){
-     return message.channel.send("You are trash");
-   } 
- }
-
+     return message.channel.send(players[players.indexOf(message.member)] + bank[players.indexOf(message.member)]); 
+   }
+  }
 });   
 bot.login(botconfig.token);
