@@ -26,8 +26,8 @@ bot.on("message", async message => {
  var index = players.indexOf(message.member);
   
  if(cmd === `${prefix}register`) { 
-   players[a] = message.member;
-   bank[b] = Math.round(200);
+   players.splice(index, 0, message.member);
+   bank.splice(index, 0, 200);
    return message.channel.send(players[a] + " have successfully registered! You have $" + bank[b] + " in your bank account!"); 
    a++;
    b++;
