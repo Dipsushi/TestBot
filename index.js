@@ -29,6 +29,7 @@ bot.on("message", async message => {
         
         return message.channel.send(players[a-1] + " " + bank[a-1]); 
       }
+  }
        
 });   
 bot.login(botconfig.token);
