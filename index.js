@@ -20,7 +20,9 @@ bot.on("message", async message => {
    
   var players = new Array(5);
   var bank = new Array(5); 
-  var a = 0; 
+  var a = 0;
+  var index = players.indexOf(message.member);
+  var b = 0;
   
   if(cmd === `${prefix}start`) { 
       if(players.includes(message.member) = -1) {
@@ -28,8 +30,13 @@ bot.on("message", async message => {
         bank.splice(a, 0, message.member); 
         
         return message.channel.send(players[a-1] + " " + bank[a-1]); 
-      }
+      } else {
+        b = bank[index] - 50; 
+        bank.splice(index, 1, b); 
+        
+        return message.channel.send(bank[index]); 
   }
+ }
        
 });   
 bot.login(botconfig.token);
