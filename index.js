@@ -30,7 +30,7 @@ bot.on("message", async message => {
    return message.channel.send(players[a] + bank[a]);
  }
  if(cmd === `${prefix}add`){
-   return message.channel.send(bank[a]); 
+   return message.channel.send("Your bank: " + bank[a]); 
  }
    
 });   
