@@ -27,6 +27,7 @@ bot.on("message", async message => {
  var newA = 0;
  var loss = 50; 
  var x = 0;
+ var j = 0; 
   
    if(cmd === `${prefix}start`) {
   
