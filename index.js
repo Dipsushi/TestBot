@@ -27,7 +27,7 @@ bot.on("message", async message => {
  if(cmd === `${prefix}register`) {
    players.splice(a, 0, message.member);
    bank.splice(b, 0, 200);
-   return message.channel.send(bank[a]);
+   return message.channel.send(players[a] + bank[b]);
    a++;
    b++;
  }
