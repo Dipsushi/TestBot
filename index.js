@@ -43,7 +43,7 @@ bot.on("message", async message => {
    var x = getRandomInt(0 , 10);
    if(x <= 5) {
      newA = A;
-     newA = newA - 50;
+     newA = newA - lose;
      A = newA;
      return message.channel.send("You lost $50. Your new balance is now $ " + newA + ".");
    } else if(x > 5 && x <= 10){
