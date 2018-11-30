@@ -50,7 +50,8 @@ bot.on("message", async message => {
      value2 = value - 50; 
      bank.splice(players.indexOf(message.member), 0, value2);
      return message.channel.send("You lost $50. Your new balance is now $ " + bank[players.indexOf(message.member)]  + ".");
-   } 
+   } else {
+   return message.channel.send("Nope try again"); 
  }
  }
 
