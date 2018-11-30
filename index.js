@@ -18,19 +18,19 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
   
+  function getRandomInt(min, max) {
+ min = Math.ceil(min);
+ max = Math.floor(max);
+ return Math.floor(Math.random() * (max - min)) + min;
+ } 
+
  var players = [];
  var bank = [];
  var a = 0;
  var b = 0;
  var value = 0;
  var loss = 50;
- 
- function getRandomInt(min, max) {
- min = Math.ceil(min);
- max = Math.floor(max);
- return Math.floor(Math.random() * (max - min)) + min;
- }
- 
+  
  if(cmd === `${prefix}register`) {
    if(players.includes(message.member) == -1) {
    players.splice(a, 0, message.member);
