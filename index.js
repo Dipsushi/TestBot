@@ -18,12 +18,14 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
 
- var players = [];
- var bank = [];
- var a = 0;
- var b = 0;
- var value = 0;
- var loss = 50;
+  players = [];
+  bank = [];
+  a = 0;
+  b = 0;
+  value = 0;
+  loss = 50;
+  
+function register() { 
   
  if(cmd === `${prefix}register`) {
    if(players.includes(message.member) == -1) {
@@ -35,11 +37,23 @@ bot.on("message", async message => {
  } else {
    return message.channel.send("You are already registered!");
  }
- if(cmd === `${prefix}meep`){
-   return message.channel.send(players[a] + bank[b]);
+ }
+function getRandomInt(min, max) {
+ min = Math.ceil(min);
+ max = Math.floor(max);
+ return Math.floor(Math.random() * (max - min)) + min;
+ }
+ if(message.content === `${prefix}random`) {
+   var x = getRandomInt(0 , 20);
+   if(x < 5) {
+     return message.channel.send(players[a] + bank[b]);
+   } else if(x > 5 && x < 10){
+     return message.channel.send("You are trash");
+   } else {
+     return message.channel.send("You are golden trash");
  }
  }
- 
+}
 
 });   
 bot.login(botconfig.token);
