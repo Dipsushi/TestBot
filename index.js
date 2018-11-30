@@ -38,9 +38,9 @@ bot.on("message", async message => {
  }  
     
  if(message.content === `${prefix}random`) {
-   var min = Math.ceil(min);
-   var max = Math.floor(max);
-   var x = Math.floor(Math.random() * (max - min)) + min;
+  function getRandomInt() {
+    return Math.floor(Math.random() * Math.floor(10));
+  }
    if(x <= 5) {
      return message.channel.send(players[a] + bank[b]);
    } else if(x > 5){
