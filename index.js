@@ -21,8 +21,10 @@ bot.on("message", async message => {
   var players = new Array(5);
   var bank = new Array(5); 
   var a = 0;
-  var b = 0;
-  var loss = 50; 
+  var index = 0;
+  var loss = 50;
+  var value = 0;
+  var newvalue = 0; 
   
   if(cmd === `${prefix}start`) { 
       if(players.includes(message.member) = -1) {
@@ -31,10 +33,12 @@ bot.on("message", async message => {
         
         return message.channel.send(players[a-1] + " " + bank[a-1]); 
       } else {
-        b = bank[players.indexOf(message.member)] - loss; 
-        bank.splice(players.indexOf(message.member), 1, b); 
+        index = players.indexOf(message.member); 
+        value = bank[index]; 
+        newvalue = value + loss; 
+        bank.splice(index, 1, newvalue); 
         
-        return message.channel.send(bank[players.indexOf(message.member)]); 
+        return message.channel.send(bank[index]); 
   }
  }
        
