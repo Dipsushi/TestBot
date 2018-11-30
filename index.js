@@ -17,15 +17,15 @@ bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
-
+  
+function register() { 
+  
   players = [];
   bank = [];
   a = 0;
   b = 0;
   value = 0;
   loss = 50;
-  
-function register() { 
   
  if(cmd === `${prefix}register`) {
    if(players.includes(message.member) == -1) {
