@@ -18,32 +18,8 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
     
- var players = [];
- var bank = [];
- var a = 0;
- var b = 0;
- var c = 0;
- var d = 0;
- var newA = 0;
- var loss = 50; 
- var x = 0;
- var j = 0; 
-  
-   if(cmd === `${prefix}start`) {
-  
-   if(d = 0){
-   players.splice(a, 0, message.member);
-   bank.splice(b, 0, 200);
-   a++;
-   b++;
-   return message.channel.send(players[a-1] + bank[b-1]);
- 
-   } else if(x = 0 ) {
-     newA = players.indexOf(message.member); 
-     newA = newA - loss; 
-     var newbalance = bank.splice(players.indexOf(message.member), 0, newA);
-     return message.channel.send(players[players.indexOf(message.member)] + bank[players.indexOf(message.member)]); 
-   }
-  }
+ if(cmd === `${prefix}what`){
+   return message.channel.send("nope");
+ }
 });   
 bot.login(botconfig.token);
