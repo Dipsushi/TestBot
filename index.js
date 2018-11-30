@@ -17,21 +17,18 @@ bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
-    
+   
   var players = new Array(5);
   var bank = new Array(5); 
-  var a = 0;
-  var b = 0; 
-   
- if(cmd === `${prefix}what`){
-   players.splice(a, 0, message.member); 
-   bank.splice(a, 0, 200); 
-   
-   return message.channel.send(players[a] + bank[a]);
- }
- if(cmd === `${prefix}add`){
-   return message.channel.send("Your bank: " + bank[a]); 
- }
+  var a = 0; 
   
+  if(cmd === `${prefix}start`) { 
+      if(players.includes(message.member) = -1) {
+        players.splice(a, 0, message.member); 
+        bank.splice(a, 0, message.member); 
+        
+        return message.channel.send(players[a-1] + " " + bank[a-1]); 
+      }
+       
 });   
 bot.login(botconfig.token);
