@@ -20,12 +20,12 @@ bot.on("message", async message => {
   
 function register() { 
   
-  players = [];
-  bank = [];
-  a = 0;
-  b = 0;
-  value = 0;
-  loss = 50;
+ var players = [];
+ var bank = [];
+ var a = 0;
+ var b = 0;
+ var value = 0;
+ 
   
  if(cmd === `${prefix}register`) {
    if(players.includes(message.member) == -1) {
@@ -37,7 +37,7 @@ function register() {
  } else {
    return message.channel.send("You are already registered!");
  }
- }
+   
 function getRandomInt(min, max) {
  min = Math.ceil(min);
  max = Math.floor(max);
@@ -53,6 +53,7 @@ function getRandomInt(min, max) {
      return message.channel.send("You are golden trash");
  }
  }
+}
 }
 
 });   
