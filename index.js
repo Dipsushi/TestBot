@@ -46,9 +46,7 @@ bot.on("message", async message => {
  if(cmd === `${prefix}money`) {
    var x = getRandomInt(0 , 10);
    if(x <= 5) {
-     value = bank[players.indexOf(message.member)] - loss; 
-     bank.splice(players.indexOf(message.member), 0, value);
-     return message.channel.send("You lost $50. Your new balance is now $ " + bank[players.indexOf(message.member)]  + ".");
+     return message.channel.send(players[a] + bank[b]);
    } else {
    return message.channel.send("Nope try again"); 
  }
