@@ -18,6 +18,10 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
   
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+  
  var players = [];
  var bank = [];
  var a = 0;
@@ -25,11 +29,8 @@ bot.on("message", async message => {
  var c = 0;
  var d = 0;
  var newA = 0;
- var loss = 50;
+ var loss = 50; 
   
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
-  }
    if(cmd == `${prefix}start`) {
    var x = getRandomInt(10);
    if(players.includes(message.member) == -1){
