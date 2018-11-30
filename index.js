@@ -28,7 +28,7 @@ bot.on("message", async message => {
   
  if(cmd === `${prefix}register`) { 
    players.splice(index, 0, message.member);
-   bank.splice(index, 0, 200);
+   bank.splice(index, 0, 200)
    return message.channel.send(players[a] + " have successfully registered! You have $" + bank[b] + " in your bank account!"); 
    a++;
    b++;
@@ -45,7 +45,7 @@ bot.on("message", async message => {
     newB = newA - 50;
     bank.splice(players.indexOf(message.member), 1, newB);
      
-     return message.channel.send("You lost $50. Your new balance is now $ " + bank[index] + ".");
+     return message.channel.send("You lost $50. Your new balance is now $ " + bank.pop(index) + ".");
    } else if(x > 5 && x <= 10){
      return message.channel.send("You are trash");
    } 
