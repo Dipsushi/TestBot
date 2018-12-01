@@ -22,7 +22,7 @@ bot.on("message", async message => {
   let args = messageArray.slice(1);
    
   if(message.content.startsWith("write")) {
-    editmessage = messag.content.slice(6); 
+    editmessage = message.content.slice(6); 
     
     bot.data [message.author.username] = {
       message: editmessage
