@@ -32,6 +32,10 @@ bot.on("message", async message => {
     message.channel.send("message written");
       });
      }
+  if(message.content.startsWith("get")) {
+    let _message = bot.data[message.author.username].message;
+    message.channel.send{"message is : " + _message);
+    }
  
 });   
 bot.login(botconfig.token);
