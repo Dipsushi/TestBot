@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 const {Client, RichEmbed} = require(`discord.js`);
 
 const fs = require("fs");
-bot.data = require("./data.json");
+client.data = require("./data.json");
 
 const bot = new Discord.Client({disableEveryone: true});
 
