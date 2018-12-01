@@ -29,7 +29,7 @@ bot.on("message", async message => {
   }
   fs.writeFile("./data.json", JSON.stringify (bot.data, null, 4), err => {
     if(err) throw err;
-    message.channelsend("message written");
+    message.channel.send("message written");
       });
      }
  
