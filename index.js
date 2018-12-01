@@ -2,15 +2,15 @@ const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
 const {Client, RichEmbed} = require(`discord.js`);
 
-const fs = require("fs");
-client.data = require("./data.json");
-
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
   bot.user.setActivity("Monopoly.");
 });
+
+const fs = require("fs");
+bot.data = require("./data.json");
 
 bot.on("message", async message => {
   if(message.author.bot) return;
