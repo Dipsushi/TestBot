@@ -24,6 +24,7 @@ bot.on("message", async message => {
   var players = {}; 
    
   if(cmd === `${prefix}start`) {
+    JSON.stringify(players); 
     if(players.hasOwnProperty(message.member) === 1) { 
       return message.channel.send("You are already registered!"); 
     } else {
