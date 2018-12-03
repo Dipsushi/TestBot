@@ -20,22 +20,20 @@ bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
+  
+  var players = {}; 
    
-  if(message.content.startsWith("write")) {
-    editmessage = message.content.slice(6); 
-    
-    bot.data [message.author.username] = {
-      message: editmessage
+  if(cmd === `${prefix}start`) {
+    if(arr.some(item => item.name === message.member) === true){ 
+      return message.channel.send("You are already registered!"); 
+    } else {
+    players[message.member] = {name: message.member, bank: 300}; 
   }
-  fs.writeFile("./data.json", JSON.stringify (bot.data, null, 4), err => {
+  fs.writeFile("./data.json", JSON.stringify (players, null, 4), err => {
     if(err) throw err;
-    message.channel.send("message written");
+    message.channel.send("Have fun!");
       });
      }
-  if(message.content.startsWith("get")) {
-    let _message = bot.data[message.author.username].message;
-    message.channel.send("message is : " + _message);
-    }
  
 });   
 bot.login(botconfig.token);
