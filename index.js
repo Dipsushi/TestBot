@@ -24,8 +24,7 @@ bot.on("message", async message => {
   var players = {}; 
    
   if(cmd === `${prefix}start`) {
-    JSON.stringify(players); 
-    if(players.some(item => item.name === message.member) === true){ 
+    if(players.hasOwnProperty(message.member) === 1) { 
       return message.channel.send("You are already registered!"); 
     } else {
     players[message.member] = {name: message.member, bank: 300}; 
