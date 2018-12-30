@@ -43,8 +43,20 @@ bot.on("message", async message => {
      -donationgod
      -clangamesonic
      -howtogetgood
-     -taxevasion`);
+     -taxevasion
+     -donttouchmyspaghet`);
 
+    message.channel.send(embed);
+  } else if(cmd === `${prefix}donttouchmyspaghet` && message.channel.name === "clan-information"){ /*minutemen vs phluffy*/
+    const embed = new RichEmbed()
+    .setTitle("PHluffy v. theminutemen, 1976 (0 - 9)")
+    .setColor(0xFFA07A)
+    .setDescription(`Phluffy Czerwinski, a former clash of clan World War 3 veteran, filed a lawsuit against the minutemen government
+  \n for not upholding the plan that the minutemen themselves have created. Despite the victory and high reward/benefits Phluffy recieved, 
+  \n he was furious that his favorite number was taken away from him. The case was settled with $5 million gold to Phluffy and a short term 
+  \n retirement from future war missions.`) 
+    .setImage("https://imgur.com/a/S5bwZX0");
+    
     message.channel.send(embed);
   } else if(cmd === `${prefix}clangamesonic` && message.channel.name === "clan-information"){  /* Clan Game Sonic */
     const embed = new RichEmbed()
