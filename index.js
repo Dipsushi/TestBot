@@ -50,8 +50,8 @@ bot.on("message", async message => {
     const embed = new RichEmbed()
     .setTitle("Fastest Clan Game Grinder!")
     .setColor(0x1A45EE)
-    .setDescription(`PHluffy have max the clan game points the fastest during our recent clan game!
- Can you steal PHluffy's position or will PHluffy maintain the current position?`)
+    .setDescription(`The Final Weeb have max the clan game points the fastest during our recent clan game! (oof  sorry Phluffy)
+ Can you steal The Final Weeb's position or will The Final Weeb maintain the current position?`)
     .setImage("https://memegenerator.net/img/instances/71878629/good-job.jpg");
     
     message.channel.send(embed);
